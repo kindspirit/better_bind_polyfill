@@ -29,6 +29,6 @@ With monkey patch:
 Array.bind().name// returns ""
 ```
 
-#Known Issues
+**Known Issues**
 
 Throws an EvalError in web pages containing a Content-Security-Policy that forbids eval()
