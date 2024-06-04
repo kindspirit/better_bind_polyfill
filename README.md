@@ -12,7 +12,7 @@ This also works with `new` operator:
 
 ```
 boundFunc = Date.bind(null, '2007');
-new boundFunc;// creates Date object with current date in the year 2007
+new boundFunc;// creates Date object with the year set to 2007
 ```
 
 This will also shim `Function: name` in browsers that support both accessors and `Function.prototype.toString()`.
