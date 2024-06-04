@@ -1,7 +1,7 @@
 # better_bind_polyfill
 Polyfill for `Function.prototype.bind()` and `Function: name`
 
-This polyfills `Function.prototype.bind()` in IE 5-8. To make this work on host objects such as `window.alert` using the following syntax:
+This polyfills `Function.prototype.bind()` in IE 5-8. To make this work on host objects such as `window.alert`, use the following syntax:
 
     boundFunc = Function.prototype.bind.call(alert, null, "Hello world");
     boundFunc();// alerts "Hello world"
