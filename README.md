@@ -17,7 +17,7 @@ new boundFunc;// creates Date object with current date in the year 2007
 
 This will also shim `Function: name` in browsers that support both accessors and `Function.prototype.toString()`.
 
-Finally this also monkey patches `Function.prototype.bind()` in ES5 browsers such as Firefox and Safari that otherwise give the name of the target function. The preferred behavior for pre-ES6 `Function.prototype.bind()` is to return an anonymous function:
+Finally this also monkey patches `Function.prototype.bind()` in ES5 browsers such as Firefox and Safari that otherwise return a bound function with the same name as the target function. The preferred behavior for pre-ES6 `Function.prototype.bind()` is to return an anonymous function:
 
 Without monkey patch:
 ```
