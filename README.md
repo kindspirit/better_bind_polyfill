@@ -11,6 +11,6 @@ boundFunc();// alerts "Hello world"
 This also works with `new` operator:
 
 ```
-boundFunc = Date.bind(null, '2007');
+boundFunc = Date.bind(null, '2007', '2');
 new boundFunc;// creates Date object with the year set to 2007
 ```
