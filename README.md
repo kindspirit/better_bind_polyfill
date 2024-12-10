@@ -15,6 +15,7 @@ var f = Date.bind(null, '2007', '2');//creates bound function
 f.name==="bound Date"// true (conforms to ES6 function naming)
 new f;// creates object with Date constructor and year set to 2007
 new f instanceof f;// true
+new f instanceof Date;// true
 ```
 
 
