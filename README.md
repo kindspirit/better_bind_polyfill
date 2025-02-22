@@ -33,4 +33,6 @@ Host functions in IE 5-8 such as `window.alert` do not inherit from Function.pro
 ```
 f = Function.prototype.bind.call(alert, null, "Hello world");
 f();// alerts "Hello world"
+f.name// "bound "
+f.length// 0
 ```
