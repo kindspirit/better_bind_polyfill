@@ -46,7 +46,7 @@ Also unlike real bound functions, functions created with this polyfill when used
 So for example:
 
 ```
-var S = String.bind();
+var S = String.bind()
 , s = new S// constructs new String object
 S.call(s)// should be "", but since s.constructor==String, polyfill creates a new String object
 ```
