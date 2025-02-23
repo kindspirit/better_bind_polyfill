@@ -47,6 +47,6 @@ So for example:
 
 ```
 var S = String.bind();
-, s = new S// returns String object
-S.call(s)// should return an empty string, but since s.constructor===String, polyfill creates a new String object
+, s = new S// constructs new String object
+S.call(s)// should be "", but since s.constructor==String, polyfill creates a new String object
 ```
