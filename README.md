@@ -51,4 +51,4 @@ var S = String.bind()
 S.call(s)// should be "", but since s.constructor==String, polyfill creates another String object
 ```
 
-But since there is never any reason to use .call() or .apply() with a bound function, most of the time that doen't matter.
+But since there is never any reason to use .call() or .apply() with a bound function, most of the time that doesn't matter.
