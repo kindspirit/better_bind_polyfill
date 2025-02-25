@@ -1,15 +1,15 @@
 # better_bind_polyfill
-Polyfill for `Function.prototype.bind()` (Tested in IE 5-8)<br>
-Shim for `Function: name` (Tested in IE 9-11)
+Polyfill for `Function.prototype.bind()` (Tested in IE 5-8, Opera 10, Chrome 1-15, Firefox 2-4)<br>
+Shim for `Function: name` (Tested in IE 9-11, Opera 10)
 
 To use:
 ```
 <script src="Function.min.js"></script>
 ```
 
-This polyfills `Function.prototype.bind()` in IE 5-8 as well any other browser that supports ES3+ but is lacking support for `Function.prototype.bind()`
+This polyfills `Function.prototype.bind()` in ES3 compatible browsers lacking support for `Function.prototype.bind()`
 
-The shim for `Function: name` works in IE because IE does not natively support `Function: name`. Old browsers that supported `Function: name` natively but didn't conform to ES6 cannot be shimmed because `Function: name` was neither configurable nor writable. It also can't be shimmed in IE 5-8 as there was no getter support on prototypes (but boundFunc.name is still assigned to "bound funcName" or just "bound " if the target function's name cannot be retrieved.)
+The shim for `Function: name` works in Internet Explorer (IE) and Opera 10 because they browsers do not natively support `Function: name`. Old browsers that natively supported `Function: name` such as Firefox, Safari and Chrome but didn't conform to ES6 cannot be shimmed because `Function: name` was neither configurable nor writable. It also can't be shimmed in IE 5-8 as there was no getter support on prototypes (but boundFunc.name is still set to "bound funcName" or just "bound " if the target function's name cannot be retrieved.)
 
 Examples:
 ```
