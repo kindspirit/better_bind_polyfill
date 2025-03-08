@@ -1,6 +1,6 @@
 # better_bind_polyfill
-Polyfill for `Function.prototype.bind()` (Tested in IE 5-8, Opera 10, Chrome 1-15, Firefox 2-4)<br>
-Shim for `Function: name` (Tested in IE 9-11, Opera 10)
+Polyfill for `Function.prototype.bind()` (Tested in IE 5-8, Opera 9.5-10, Chrome 1-15, Firefox 2-4)<br>
+Shim for `Function: name` (Tested in IE 9-11, Opera 9.5-10)
 
 To use:
 ```
