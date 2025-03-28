@@ -29,7 +29,7 @@ Object.hasOwn([], 'length');// true
 ```
 
 
-Host functions in IE 5-8 such as `window.alert` do not inherit from Function.prototype. So to make this work on host functions in IE 5-8, use the following syntax:
+Host functions in IE 5-8 such as `window.alert` do not inherit from `Function.prototype`. So for best compatibility across browsers use the following syntax:
 ```
 f = Function.prototype.bind.call(alert, null, "Hello world");
 f();// alerts "Hello world"
@@ -47,8 +47,8 @@ So for example:
 
 ```
 var S = String.bind()
-, s = new S// constructs new String object
-S.call(s)// should be "", but since s.constructor==String, polyfill creates another String object
+, s = new S// constructs a new String object where s.constructor==String//true
+S.call(s)// should be "", but polyfill again constructs a new String object
 ```
 
-But since there is usually never any reason to use .call() or .apply() with a bound function, the above example is an edge case you would typically never find anywhere. So it's just something to be aware of, not worry about.
+The above is an artifact of no perfect way to test for use of the `new` keyword in ES3. But since there is rarely any reason to use .call() or .apply() with a bound function, the above example is an edge case you would typically never find anywhere. So it's just something to be aware of.
