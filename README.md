@@ -51,4 +51,4 @@ var S = String.bind()
 S.call(s)// should be "", but polyfill again constructs a new String object
 ```
 
-The above is an artifact of no perfect way to test for use of the `new` keyword in ES3. But since there is rarely any reason to use .call() or .apply() with a bound function, the above example is an edge case you would typically never find anywhere. So it's just something to be aware of.
+The above is an artifact of ES3 having no perfect way to test for use of the `new` keyword. But since there is rarely any reason to use .call() or .apply() with a bound function, the above example is an edge case you would typically never find anywhere. So it's just something to be aware of.
