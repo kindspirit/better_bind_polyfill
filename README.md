@@ -9,7 +9,7 @@ To use:
 
 This polyfills `Function.prototype.bind()` in ES3 compatible browsers lacking support for `Function.prototype.bind()`
 
-The shim for `Function: name` works in Internet Explorer (IE) and Opera 10 because they do not natively support `Function: name`. Old browsers that natively supported `Function: name` such as Firefox, Safari and Chrome but didn't conform to ES6 cannot be shimmed because `Function: name` was neither configurable nor writable. It also can't be shimmed in IE 5-8 as there was no getter support on prototypes (but boundFunc.name is still set to "bound funcName" or just "bound " if the target function's name cannot be retrieved.)
+The shim for `Function: name` works in Internet Explorer (IE) and Opera 10 because they do not natively support `Function: name`. Old browsers that natively supported `Function: name` such as Firefox, Safari and Chrome but didn't conform to ES6 cannot be shimmed because `Function: name` was neither configurable nor writable. It also can't be shimmed in IE 5-8 as there was no getter support on prototypes (but boundFunc.name is still set to "bound funcName" or just "bound " if the target function doesn't have a name.)
 
 Examples:
 ```
