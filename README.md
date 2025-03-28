@@ -41,7 +41,7 @@ f.length// 0
 
 Unlike real bound functions, functions created with this polyfill have a prototype property. But since at the time of its creation the bound function's prototype property is set to the prototype property of the target function, it responds to `instanceof` checks in the same way as a real bound function would.
 
-Also unlike real bound functions, functions created with this polyfill when used with .call(object) or .apply(object) will internally trigger the `new` operator if the passed object is empty and its constructor property matches the target function (or obj.constructor==Object if the target function does not have a prototype property.)
+Also unlike real bound functions, functions created with this polyfill when used with .call(object) or .apply(object) will internally trigger the `new` operator if the passed object is empty and its constructor property matches the target function (or `obj.constructor==Object` if the target function does not have a prototype property.)
 
 So for example:
 
@@ -51,4 +51,4 @@ var S = String.bind()
 S.call(s)// should be "", but polyfill again constructs a new String object
 ```
 
-The above is an artifact of ES3 having no perfect way to test for use of the `new` keyword. But since there is rarely any reason to use .call() or .apply() with a bound function, the above example is an edge case you would typically never find anywhere. So it's just something to be aware of.
+The above is an artifact of ES3 having no foolproof way to test for use of the `new` keyword. But since there is rarely any reason to use .call() or .apply() with a bound function, the above example is an edge case you would typically never find anywhere. So it's just something to be aware of.
