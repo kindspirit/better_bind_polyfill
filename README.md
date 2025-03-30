@@ -57,7 +57,7 @@ The above is an artifact of ES3 having no foolproof way to test for use of the `
 
 This polyfill uses direct `eval()` which most guides say to avoid because it is slower than `Function()`. That may be true in modern browsers. However when I benchmarked it in all Internet Explorer versions, direct `eval()` outperformed  `Function()` every time. The difference was noticeable but not significant. And since the minified version using `eval()` is smaller, that's what I went with.
 
-Benchmarks in Opera 10 also showed that direct `eval()` outperformed `Function()` but only when calling the bound function itself including calling it with the `new` operator. Creating the bound function in this case on the other hand was slower, but the difference was not significant. And since calling bind() is not something that generally needs optimizing, I don't think it matters. Plus old versions of IE are more common than Opera or other browsers from that time. I benchmarked it in Opera 10 just to compare it with other browsers from that time.
+Benchmarks in Opera 10 also showed that direct `eval()` outperformed `Function()` but only when calling the bound function itself including calling it with the `new` operator. Creating the bound function in this case on the other hand was slower, but the difference was not significant. And since calling bind() is not something that generally needs optimizing, I don't think it matters. Plus old versions of IE are more common than Opera or other browsers from that time. I benchmarked it in Opera 10 just to compare it with another old ES3 browser.
 
 ## Security
 
