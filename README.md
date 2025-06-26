@@ -73,4 +73,4 @@ Also note that since Content-Security-Policy was ignored in ES3 browsers, the co
 
 ## Why Use This
 
-I decided to do this as an exercise when I saw that the ES5 polyfill failed to correctly mimic the behavior of `Function.prototype.bind()` when used with the `new` operator. And I decided in addition to fixing that, I could write something that has better compatibility with Internet Explorer's callable and constructable host objects such as `window.alert()` and `window.XMLHttpRequest()` respectively.
+I decided to do this as an exercise when I saw that the ES5 polyfill failed to correctly mimic the behavior of `Function.prototype.bind()` when used with the `new` and `instanceof` operators. And I decided in addition to fixing that, I could write something that has better compatibility with Internet Explorer's callable and constructable host objects such as `window.alert()` and `window.XMLHttpRequest()` respectively.
