@@ -47,7 +47,7 @@ f.length// 0
 
 Unlike real bound functions, functions created with this polyfill always have a prototype property. But that usually isn't a problem since it responds to `instanceof` checks in the same way as a real bound function would. That is because at the time of the bound function's creation, its prototype property is set to the prototype property of the target function.
 
-Also unlike real bound functions, functions created with this polyfill when used with .call(object) or .apply(object) will internally trigger the `new` operator if the passed object is empty and its constructor property matches the target function (or `obj.constructor==Object` if the target function does not have a prototype property.)
+Also unlike real bound functions, functions created with this polyfill when used with .call(object) or .apply(object) will internally trigger the `new` operator if the passed object is empty and its constructor property matches the target function, or if the target function does not have a prototype property and `obj.constructor==Object`// true
 
 So for example:
 
