@@ -1,13 +1,19 @@
 # better_bind_polyfill
-Polyfill for `Function.prototype.bind()` (Tested in IE 5-8, Opera 9.5-10, Chrome 1-15, Firefox 2-4)<br>
-Shim for `Function: name` (Tested in IE 9-11, Opera 9.5-10)
+Lightweight polyfill for `Function.prototype.bind()` for use in ES3 compatible browsers lacking native support for `Function.prototype.bind()` (Tested in IE 5-8, Opera 9.5-10, Chrome 1-15, Firefox 2-4)
 
-To use:
+Also shims `Function: name` (Tested in IE 9-11, Opera 9.5-10).
+
+Size: 944 bytes
+
+To use, put the following in the `<head></head>` of your HTML document.
+
 ```
 <script src="Function.min.js"></script>
 ```
-
-This polyfills `Function.prototype.bind()` in ES3 compatible browsers lacking support for `Function.prototype.bind()`
+*or*
+```
+<script>Date.bind||document.write('<script src=Function.min.js><\/script>')</script>
+```
 
 The shim for `Function: name` works in Internet Explorer (IE) and Opera 10 because they do not natively support `Function: name`. Old browsers that natively supported `Function: name` such as Firefox, Safari and Chrome but didn't conform to ES6 cannot be shimmed because `Function: name` was neither configurable nor writable. It also can't be shimmed in IE 5-8 as there was no getter support on prototypes (but boundFunc.name is still set to "bound funcName" or just "bound " if the target function doesn't have a name.)
 
