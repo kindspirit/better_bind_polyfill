@@ -10,7 +10,7 @@ To use, put the following in the `<head></head>` of your HTML document.
 ```
 <script src="Function.min.js"></script>
 ```
-*or*
+Or only load the polyfill when needed:
 ```
 <script>Date.bind||document.write('<script src=Function.min.js><\/script>')</script>
 ```
